@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.row > col {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  width: 100%;
+}
+
+.card ul li {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Allow wrapping on smaller devices */
+@media (max-width: 768px) {
+  .card ul li {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
+
+/* Set all cards to same height */
+.power-pack-card {
+  height: 500px; /* adjust to your desired card height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set fixed height for the image inside the card */
+.power-pack-card img.card-img {
+  height: 150px; /* adjust as needed */
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Ensure the button stays at the bottom */
+.power-pack-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push button to the bottom */
+.power-pack-card .card-body a,
+.power-pack-card .card-body button {
+  margin-top: auto;
+}
+
+.text-justify {
+  text-align: justify;
+}
